@@ -7,6 +7,7 @@ import { ThemeService } from '../../shared/services/theme.service';
 interface UserProfile {
   firstName: string;
   lastName: string;
+  nickname: string;
   email: string;
   company: string;
   role: string;
@@ -41,6 +42,7 @@ export class ProfileComponent {
   profile: UserProfile = {
     firstName: 'Jan',
     lastName: 'Kowalski',
+    nickname: 'jkowalski',
     email: 'jan@firma.pl',
     company: '',
     role: '',

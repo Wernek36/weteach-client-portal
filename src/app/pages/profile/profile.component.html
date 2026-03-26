@@ -21,6 +21,21 @@
     <div class="bg-white dark:bg-dark-card rounded-2xl border border-border dark:border-dark-border p-6 mb-5 transition-colors duration-300">
       <h3 class="text-base font-semibold text-text-primary dark:text-dark-text-primary mb-5">Dane osobowe</h3>
 
+      <!-- Nick (full width) -->
+      <div class="flex flex-col gap-1.5 mb-4">
+        <label class="text-sm font-medium text-text-primary dark:text-dark-text-primary">Nick</label>
+        <div class="relative">
+          <span class="absolute left-4 top-1/2 -translate-y-1/2 text-text-muted dark:text-dark-text-muted text-sm">@</span>
+          <input
+            type="text"
+            [(ngModel)]="profile.nickname"
+            placeholder="Twój nick widoczny w rankingu"
+            class="w-full pl-8 pr-4 py-3 rounded-xl border border-border dark:border-dark-border bg-white dark:bg-dark-input text-text-primary dark:text-dark-text-primary text-sm placeholder:text-text-muted outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/10"
+          />
+        </div>
+        <p class="text-xs text-text-muted dark:text-dark-text-muted">Pod tym nickiem widoczny jestes w tablicy wynikow</p>
+      </div>
+
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <!-- Imię -->
         <div class="flex flex-col gap-1.5">
