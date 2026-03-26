@@ -52,16 +52,6 @@ export class LeaderboardComponent {
     { rank: 8,  nickname: 'jkowalski',     avatar: 'JK', progress: 44,  completedModules: 7,  totalModules: 16, isCurrentUser: true },
     { rank: 9,  nickname: 'bartek.ml',     avatar: 'BN', progress: 38,  completedModules: 6,  totalModules: 16, isCurrentUser: false },
     { rank: 10, nickname: 'ewa_product',   avatar: 'ES', progress: 38,  completedModules: 6,  totalModules: 16, isCurrentUser: false },
-    { rank: 11, nickname: 'marcin.dev',    avatar: 'MD', progress: 31,  completedModules: 5,  totalModules: 16, isCurrentUser: false },
-    { rank: 12, nickname: 'asia_ux',       avatar: 'AJ', progress: 31,  completedModules: 5,  totalModules: 16, isCurrentUser: false },
-    { rank: 13, nickname: 'pawel_k',       avatar: 'PK', progress: 25,  completedModules: 4,  totalModules: 16, isCurrentUser: false },
-    { rank: 14, nickname: 'natalia.pm',    avatar: 'NL', progress: 25,  completedModules: 4,  totalModules: 16, isCurrentUser: false },
-    { rank: 15, nickname: 'arek_fullstack', avatar: 'AR', progress: 19,  completedModules: 3,  totalModules: 16, isCurrentUser: false },
-    { rank: 16, nickname: 'gosia.data',    avatar: 'GD', progress: 19,  completedModules: 3,  totalModules: 16, isCurrentUser: false },
-    { rank: 17, nickname: 'kamil_ops',     avatar: 'KO', progress: 13,  completedModules: 2,  totalModules: 16, isCurrentUser: false },
-    { rank: 18, nickname: 'zuzia_ml',      avatar: 'ZW', progress: 13,  completedModules: 2,  totalModules: 16, isCurrentUser: false },
-    { rank: 19, nickname: 'robert.js',     avatar: 'RJ', progress: 6,   completedModules: 1,  totalModules: 16, isCurrentUser: false },
-    { rank: 20, nickname: 'marta_new',     avatar: 'MN', progress: 6,   completedModules: 1,  totalModules: 16, isCurrentUser: false },
   ];
 
   readonly myPlaybooks: PlaybookProgress[] = [
