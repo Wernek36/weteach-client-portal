@@ -51,3 +51,12 @@ html.dark body {
   color: #F1F1F6;
   background-color: #0F0F1A;
 }
+
+/* ── Nav Link Active State ───────────────────────────────── */
+.nav-link-active {
+  color: #6C3CE0 !important;
+  font-weight: 600;
+}
+.nav-link-active span:last-child {
+  transform: scaleX(1) !important;
+}

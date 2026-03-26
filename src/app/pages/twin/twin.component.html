@@ -1,0 +1,375 @@
+<div class="min-h-screen bg-bg-subtle dark:bg-dark-bg transition-colors duration-300">
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO — gradient + pulse animation
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-navy via-[#1e1145] to-[#0d0b2e] text-white">
+
+    <!-- Animated background dots -->
+    <div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle, #8B5CF6 1px, transparent 1px); background-size: 32px 32px;"></div>
+
+    <!-- Pulse ring decoration -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-primary/20 animate-pulse"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-primary/10 animate-pulse" style="animation-delay: 0.5s;"></div>
+
+    <div class="relative max-w-5xl mx-auto px-6 py-20 sm:py-28 text-center">
+
+      <!-- Badge -->
+      <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-xs font-medium px-4 py-2 rounded-full mb-8 border border-white/10">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-green"></span>
+        </span>
+        AI, które pracuje jak Ty
+      </span>
+
+      <!-- H1 -->
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 max-w-3xl mx-auto">
+        Pracuj mądrzej, nie ciężej
+        <br />
+        <span class="bg-gradient-to-r from-primary-light to-green bg-clip-text text-transparent">
+          — poznaj swojego Professional Twina
+        </span>
+      </h1>
+
+      <!-- Intro -->
+      <p class="text-base sm:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed mb-10">
+        Twój cyfrowy sobowtór, który uczy się Twojego stylu pracy, komunikacji i priorytetów.
+        Zdejmuje z Ciebie ciężar powtarzalnych zadań — abyś mógł skupić się na tym, co naprawdę wymaga Twojej uwagi.
+      </p>
+
+      <!-- CTA -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button class="px-8 py-3.5 bg-primary hover:bg-primary-dark text-white font-semibold text-sm rounded-full transition-all duration-200 shadow-lg hover:shadow-primary/25">
+          Aktywuj swojego Twina
+        </button>
+        <button class="px-8 py-3.5 bg-white/10 hover:bg-white/15 backdrop-blur-sm text-white font-semibold text-sm rounded-full transition-all duration-200 border border-white/10">
+          Zobacz jak to działa
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       ZALETY — Two column: visual + benefits
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="max-w-6xl mx-auto px-6 py-16 sm:py-20">
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+      <!-- Left: Visual (Twin "avatar" card) -->
+      <div class="relative">
+        <!-- Main card -->
+        <div class="bg-white dark:bg-dark-card rounded-3xl border border-border dark:border-dark-border p-8 shadow-lg relative overflow-hidden">
+
+          <!-- Scan line animation -->
+          <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent animate-pulse"></div>
+
+          <!-- Profile block -->
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center shadow-lg shadow-primary/20">
+              <span class="text-white font-bold text-lg">JK</span>
+            </div>
+            <div>
+              <p class="font-semibold text-text-primary dark:text-dark-text-primary">Jan Kowalski</p>
+              <p class="text-xs text-text-muted dark:text-dark-text-muted">Professional Twin aktywny</p>
+            </div>
+            <span class="ml-auto flex items-center gap-1.5 text-xs font-medium text-green bg-green/10 px-3 py-1.5 rounded-full">
+              <span class="relative flex h-1.5 w-1.5">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green"></span>
+              </span>
+              Online
+            </span>
+          </div>
+
+          <!-- Activity feed -->
+          <div class="flex flex-col gap-3">
+            <div class="flex items-center gap-3 bg-bg-subtle dark:bg-dark-input rounded-xl px-4 py-3">
+              <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <p class="text-xs font-medium text-text-primary dark:text-dark-text-primary truncate">Odpowiedział na 12 e-maili</p>
+                <p class="text-[11px] text-text-muted dark:text-dark-text-muted">2 minuty temu</p>
+              </div>
+              <span class="text-[10px] font-medium text-green bg-green/10 px-2 py-1 rounded-full">Gotowe</span>
+            </div>
+
+            <div class="flex items-center gap-3 bg-bg-subtle dark:bg-dark-input rounded-xl px-4 py-3">
+              <div class="w-8 h-8 rounded-lg bg-green/10 flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4 text-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <p class="text-xs font-medium text-text-primary dark:text-dark-text-primary truncate">Zoptymalizował kalendarz na jutro</p>
+                <p class="text-[11px] text-text-muted dark:text-dark-text-muted">15 minut temu</p>
+              </div>
+              <span class="text-[10px] font-medium text-green bg-green/10 px-2 py-1 rounded-full">Gotowe</span>
+            </div>
+
+            <div class="flex items-center gap-3 bg-bg-subtle dark:bg-dark-input rounded-xl px-4 py-3">
+              <div class="w-8 h-8 rounded-lg bg-warning/10 flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4 text-warning" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <p class="text-xs font-medium text-text-primary dark:text-dark-text-primary truncate">Przygotowuje raport tygodniowy...</p>
+                <p class="text-[11px] text-text-muted dark:text-dark-text-muted">w trakcie</p>
+              </div>
+              <span class="text-[10px] font-medium text-primary bg-primary/10 px-2 py-1 rounded-full animate-pulse">Pracuje</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Decorative floating badge -->
+        <div class="absolute -top-3 -right-3 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg shadow-primary/30">
+          AI-powered
+        </div>
+      </div>
+
+      <!-- Right: Text + benefits -->
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-text-primary dark:text-dark-text-primary mb-4 leading-tight">
+          Twój czas jest zbyt cenny
+          <br />na copy-paste.
+        </h2>
+        <p class="text-text-secondary dark:text-dark-text-secondary leading-relaxed mb-8">
+          Professional Twin uczy się Twojego stylu komunikacji, Twoich priorytetów i sposobu pracy.
+          Nie zastępuje Cię — wzmacnia. Przejmuje powtarzalne zadania, abyś mógł robić to,
+          w czym jesteś naprawdę dobry.
+        </p>
+
+        <!-- Benefit list -->
+        <div class="flex flex-col gap-4">
+          <div class="flex items-start gap-3.5">
+            <div class="w-8 h-8 rounded-lg bg-green/10 flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-text-primary dark:text-dark-text-primary">Uczy się z każdej interakcji</p>
+              <p class="text-sm text-text-muted dark:text-dark-text-muted">Im więcej pracujesz, tym lepiej Twój Twin odtwarza Twój styl.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3.5">
+            <div class="w-8 h-8 rounded-lg bg-green/10 flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-text-primary dark:text-dark-text-primary">Zawsze pod Twoją kontrolą</p>
+              <p class="text-sm text-text-muted dark:text-dark-text-muted">Nic nie wychodzi bez Twojego zatwierdzenia. Ty decydujesz, co Twin może robić samodzielnie.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3.5">
+            <div class="w-8 h-8 rounded-lg bg-green/10 flex items-center justify-center shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-text-primary dark:text-dark-text-primary">Prywatność na pierwszym miejscu</p>
+              <p class="text-sm text-text-muted dark:text-dark-text-muted">Twoje dane zostają u Ciebie. Twin działa w bezpiecznym środowisku, bez dostępu dla osób trzecich.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FEATURE GRID — Bento box layout
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="bg-white dark:bg-dark-card border-y border-border dark:border-dark-border transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-6 py-16 sm:py-20">
+
+      <!-- Section header -->
+      <div class="text-center mb-12">
+        <span class="inline-flex items-center gap-2 bg-primary/[0.06] text-primary text-xs font-medium px-4 py-2 rounded-full mb-4">
+          5 kluczowych funkcji
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-text-primary dark:text-dark-text-primary mb-3">
+          Jeden Twin. Pięć superskilli.
+        </h2>
+        <p class="text-text-secondary dark:text-dark-text-secondary max-w-lg mx-auto">
+          Każda funkcja to godziny odzyskanego czasu tygodniowo. Razem — to nowy sposób pracy.
+        </p>
+      </div>
+
+      <!-- Bento grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div
+          *ngFor="let feature of features; let i = index"
+          (mouseenter)="setActive(i)"
+          (mouseleave)="activeFeature = null"
+          class="group relative bg-bg-subtle dark:bg-dark-input rounded-2xl border border-border dark:border-dark-border p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 cursor-default"
+          [class.sm:col-span-2]="i === 3"
+          [class.lg:col-span-1]="i === 3"
+        >
+
+          <!-- Glassmorphism icon -->
+          <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg"
+               [ngClass]="{
+                 'bg-gradient-to-br from-primary/20 to-primary/5 group-hover:shadow-primary/20': feature.icon === 'communication',
+                 'bg-gradient-to-br from-green/20 to-green/5 group-hover:shadow-green/20': feature.icon === 'meetings',
+                 'bg-gradient-to-br from-primary-light/20 to-primary-light/5 group-hover:shadow-primary-light/20': feature.icon === 'emails',
+                 'bg-gradient-to-br from-warning/20 to-warning/5 group-hover:shadow-warning/20': feature.icon === 'calendar',
+                 'bg-gradient-to-br from-error/20 to-error/5 group-hover:shadow-error/20': feature.icon === 'analytics'
+               }">
+
+            <!-- Communication -->
+            <svg *ngIf="feature.icon === 'communication'" class="w-6 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+            </svg>
+
+            <!-- Meetings -->
+            <svg *ngIf="feature.icon === 'meetings'" class="w-6 h-6 text-green" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+            </svg>
+
+            <!-- Emails -->
+            <svg *ngIf="feature.icon === 'emails'" class="w-6 h-6 text-primary-light" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+            </svg>
+
+            <!-- Calendar -->
+            <svg *ngIf="feature.icon === 'calendar'" class="w-6 h-6 text-warning" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+            </svg>
+
+            <!-- Analytics -->
+            <svg *ngIf="feature.icon === 'analytics'" class="w-6 h-6 text-error" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+            </svg>
+          </div>
+
+          <!-- Title -->
+          <h3 class="text-base font-semibold text-text-primary dark:text-dark-text-primary mb-1">{{ feature.title }}</h3>
+
+          <!-- Benefit -->
+          <p class="text-sm font-medium text-primary mb-2">{{ feature.benefit }}</p>
+
+          <!-- Description -->
+          <p class="text-sm text-text-muted dark:text-dark-text-muted leading-relaxed">{{ feature.description }}</p>
+
+          <!-- Scan line on hover -->
+          <div class="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PROCES — Jak Twin się uczy
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="max-w-5xl mx-auto px-6 py-16 sm:py-20">
+
+    <div class="text-center mb-12">
+      <h2 class="text-2xl sm:text-3xl font-bold text-text-primary dark:text-dark-text-primary mb-3">
+        Jak to działa?
+      </h2>
+      <p class="text-text-secondary dark:text-dark-text-secondary max-w-lg mx-auto">
+        Trzy kroki do Twojego cyfrowego sobowtóra. Bez skomplikowanej konfiguracji.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
+      <!-- Step 1 -->
+      <div class="relative bg-white dark:bg-dark-card rounded-2xl border border-border dark:border-dark-border p-6 text-center">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center shadow-lg shadow-primary/25">1</div>
+        <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mt-3 mb-4">
+          <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" /></svg>
+        </div>
+        <h3 class="text-sm font-semibold text-text-primary dark:text-dark-text-primary mb-2">Podłącz swoje narzędzia</h3>
+        <p class="text-xs text-text-muted dark:text-dark-text-muted leading-relaxed">E-mail, kalendarz, Slack, dokumenty — Twin integruje się z narzędziami, których już używasz.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="relative bg-white dark:bg-dark-card rounded-2xl border border-border dark:border-dark-border p-6 text-center">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center shadow-lg shadow-primary/25">2</div>
+        <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mt-3 mb-4">
+          <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" /></svg>
+        </div>
+        <h3 class="text-sm font-semibold text-text-primary dark:text-dark-text-primary mb-2">Twin się uczy</h3>
+        <p class="text-xs text-text-muted dark:text-dark-text-muted leading-relaxed">AI analizuje Twój styl pisania, priorytety i wzorce pracy. W 48 godzin jest gotowy do działania.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="relative bg-white dark:bg-dark-card rounded-2xl border border-border dark:border-dark-border p-6 text-center">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center shadow-lg shadow-primary/25">3</div>
+        <div class="w-14 h-14 rounded-2xl bg-green/10 flex items-center justify-center mx-auto mt-3 mb-4">
+          <svg class="w-7 h-7 text-green" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" /></svg>
+        </div>
+        <h3 class="text-sm font-semibold text-text-primary dark:text-dark-text-primary mb-2">Pracujesz ze wsparciem</h3>
+        <p class="text-xs text-text-muted dark:text-dark-text-muted leading-relaxed">Twin działa w tle — Ty zatwierdzasz wyniki. Z każdym dniem staje się lepszy i bardziej samodzielny.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SOCIAL PROOF — Testimonial
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="bg-white dark:bg-dark-card border-y border-border dark:border-dark-border transition-colors duration-300">
+    <div class="max-w-4xl mx-auto px-6 py-16 sm:py-20">
+      <div class="text-center">
+
+        <!-- Quote mark -->
+        <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
+          <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z" />
+          </svg>
+        </div>
+
+        <blockquote class="text-lg sm:text-xl font-medium text-text-primary dark:text-dark-text-primary leading-relaxed mb-6 max-w-2xl mx-auto italic">
+          "Mój Professional Twin odpisał na 40 maili, podczas gdy ja prowadziłem warsztat.
+          Nikt nie zauważył różnicy."
+        </blockquote>
+
+        <div class="flex items-center justify-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center">
+            <span class="text-white font-semibold text-sm">AW</span>
+          </div>
+          <div class="text-left">
+            <p class="text-sm font-semibold text-text-primary dark:text-dark-text-primary">Anna Wiśniewska</p>
+            <p class="text-xs text-text-muted dark:text-dark-text-muted">Head of Operations, TechScale</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CTA — Bottom
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="max-w-5xl mx-auto px-6 py-16 sm:py-20">
+    <div class="bg-gradient-to-br from-navy via-[#1e1145] to-[#0d0b2e] rounded-3xl px-8 sm:px-14 py-12 sm:py-16 text-center relative overflow-hidden">
+
+      <!-- Background decoration -->
+      <div class="absolute inset-0 opacity-[0.05]" style="background-image: radial-gradient(circle, #8B5CF6 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+      <div class="relative">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
+          Gotowy na cyfrowe wsparcie?
+        </h2>
+        <p class="text-white/60 max-w-lg mx-auto mb-8 leading-relaxed">
+          Dołącz do specjalistów, trenerów i managerów, którzy odzyskali kontrolę nad swoim czasem.
+          Aktywuj Professional Twina i pracuj na swoich zasadach.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button class="px-10 py-4 bg-primary hover:bg-primary-dark text-white font-semibold text-sm rounded-full transition-all duration-200 shadow-lg hover:shadow-primary/30">
+            Aktywuj Professional Twina — za darmo
+          </button>
+        </div>
+        <p class="text-xs text-white/40 mt-4">Bez karty kredytowej. 14 dni darmowego okresu próbnego.</p>
+      </div>
+
+    </div>
+  </section>
+
+</div>
