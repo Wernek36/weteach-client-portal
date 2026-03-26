@@ -4,6 +4,8 @@
 @source "./**/*.html";
 @source "./**/*.ts";
 
+@variant dark (&:where(.dark, .dark *));
+
 /* ── WeTeach Design Tokens ─────────────────────────────────── */
 @theme {
   --color-primary:        #6C3CE0;
@@ -25,6 +27,14 @@
   --color-error:          #EF4444;
   --color-warning:        #F59E0B;
 
+  --color-dark-bg:             #0F0F1A;
+  --color-dark-card:           #1A1A2E;
+  --color-dark-input:          #242440;
+  --color-dark-border:         #2D2D4A;
+  --color-dark-text-primary:   #F1F1F6;
+  --color-dark-text-secondary: #A3A3BF;
+  --color-dark-text-muted:     #6B6B8A;
+
   --font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
   --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
 }
@@ -33,4 +43,11 @@ body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   color: #1E2235;
   background-color: #F8F9FD;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* ── Dark Mode ───────────────────────────────────────────── */
+html.dark body {
+  color: #F1F1F6;
+  background-color: #0F0F1A;
 }

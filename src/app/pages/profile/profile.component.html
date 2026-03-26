@@ -1,0 +1,197 @@
+<div class="min-h-screen bg-bg-subtle dark:bg-dark-bg transition-colors duration-300">
+
+  <!-- Topbar -->
+  <header class="bg-white dark:bg-dark-card border-b border-border dark:border-dark-border px-6 py-4 transition-colors duration-300">
+    <div class="max-w-4xl mx-auto flex items-center gap-4">
+      <button
+        routerLink="/dashboard"
+        class="w-9 h-9 rounded-xl border border-border dark:border-dark-border flex items-center justify-center text-text-secondary dark:text-dark-text-secondary hover:border-primary hover:text-primary transition"
+      >
+        ←
+      </button>
+      <img [src]="theme.darkMode() ? '/logo-dark.svg' : '/logo.svg'" alt="WeTeach" class="h-8" />
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="max-w-4xl mx-auto px-6 py-10">
+
+    <h1 class="text-2xl font-bold text-text-primary dark:text-dark-text-primary mb-1">Twój profil</h1>
+    <p class="text-sm text-text-secondary dark:text-dark-text-secondary mb-8">Uzupełnij dane, aby lepiej dopasować treści do Twoich potrzeb.</p>
+
+    <!-- Avatar i imię -->
+    <div class="bg-white dark:bg-dark-card rounded-2xl border border-border dark:border-dark-border p-6 mb-5 flex items-center gap-5 transition-colors duration-300">
+      <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+        <span class="text-primary font-bold text-xl">{{ initials }}</span>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-text-primary dark:text-dark-text-primary">{{ profile.firstName }} {{ profile.lastName }}</h2>
+        <p class="text-sm text-text-muted dark:text-dark-text-muted">{{ profile.email }}</p>
+      </div>
+    </div>
+
+    <!-- Formularz -->
+    <div class="bg-white dark:bg-dark-card rounded-2xl border border-border dark:border-dark-border p-6 mb-5 transition-colors duration-300">
+      <h3 class="text-base font-semibold text-text-primary dark:text-dark-text-primary mb-5">Dane osobowe</h3>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Imię -->
+        <div class="flex flex-col gap-1.5">
+          <label class="text-sm font-medium text-text-primary dark:text-dark-text-primary">Imię</label>
+          <input
+            type="text"
+            [(ngModel)]="profile.firstName"
+            class="w-full px-4 py-3 rounded-xl border border-border dark:border-dark-border bg-white dark:bg-dark-input text-text-primary dark:text-dark-text-primary text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/10"
+          />
+        </div>
+
+        <!-- Nazwisko -->
+        <div class="flex flex-col gap-1.5">
+          <label class="text-sm font-medium text-text-primary dark:text-dark-text-primary">Nazwisko</label>
+          <input
+            type="text"
+            [(ngModel)]="profile.lastName"
+            class="w-full px-4 py-3 rounded-xl border border-border dark:border-dark-border bg-white dark:bg-dark-input text-text-primary dark:text-dark-text-primary text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/10"
+          />
+        </div>
+
+        <!-- Email -->
+        <div class="flex flex-col gap-1.5">
+          <label class="text-sm font-medium text-text-primary dark:text-dark-text-primary">Email</label>
+          <input
+            type="email"
+            [(ngModel)]="profile.email"
+            class="w-full px-4 py-3 rounded-xl border border-border dark:border-dark-border bg-white dark:bg-dark-input text-text-primary dark:text-dark-text-primary text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/10"
+          />
+        </div>
+
+        <!-- Firma -->
+        <div class="flex flex-col gap-1.5">
+          <label class="text-sm font-medium text-text-primary dark:text-dark-text-primary">Firma</label>
+          <input
+            type="text"
+            [(ngModel)]="profile.company"
+            placeholder="Nazwa firmy"
+            class="w-full px-4 py-3 rounded-xl border border-border dark:border-dark-border bg-white dark:bg-dark-input text-text-primary dark:text-dark-text-primary text-sm placeholder:text-text-muted outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/10"
+          />
+        </div>
+
+        <!-- Stanowisko -->
+        <div class="flex flex-col gap-1.5">
+          <label class="text-sm font-medium text-text-primary dark:text-dark-text-primary">Stanowisko</label>
+          <select
+            [(ngModel)]="profile.role"
+            class="w-full px-4 py-3 rounded-xl border border-border dark:border-dark-border bg-white dark:bg-dark-input text-text-primary dark:text-dark-text-primary text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/10"
+          >
+            <option value="" disabled>Wybierz stanowisko</option>
+            <option value="developer">Developer</option>
+            <option value="product-manager">Product Manager</option>
+            <option value="designer">Designer</option>
+            <option value="data-scientist">Data Scientist</option>
+            <option value="manager">Manager / Team Lead</option>
+            <option value="founder">Founder / CEO</option>
+            <option value="marketer">Marketer</option>
+            <option value="other">Inne</option>
+          </select>
+        </div>
+
+        <!-- Doświadczenie -->
+        <div class="flex flex-col gap-1.5">
+          <label class="text-sm font-medium text-text-primary dark:text-dark-text-primary">Doświadczenie z AI</label>
+          <select
+            [(ngModel)]="profile.experience"
+            class="w-full px-4 py-3 rounded-xl border border-border dark:border-dark-border bg-white dark:bg-dark-input text-text-primary dark:text-dark-text-primary text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/10"
+          >
+            <option value="" disabled>Wybierz poziom</option>
+            <option value="beginner">Początkujący — dopiero zaczynam</option>
+            <option value="intermediate">Średniozaawansowany — używam AI w pracy</option>
+            <option value="advanced">Zaawansowany — buduję rozwiązania AI</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Bio -->
+      <div class="flex flex-col gap-1.5 mt-4">
+        <label class="text-sm font-medium text-text-primary dark:text-dark-text-primary">O mnie</label>
+        <textarea
+          [(ngModel)]="profile.bio"
+          rows="3"
+          placeholder="Napisz kilka słów o sobie, swoich celach i oczekiwaniach..."
+          class="w-full px-4 py-3 rounded-xl border border-border dark:border-dark-border bg-white dark:bg-dark-input text-text-primary dark:text-dark-text-primary text-sm placeholder:text-text-muted outline-none transition resize-none focus:border-primary focus:ring-2 focus:ring-primary/10"
+        ></textarea>
+      </div>
+    </div>
+
+    <!-- Zainteresowania -->
+    <div class="bg-white dark:bg-dark-card rounded-2xl border border-border dark:border-dark-border p-6 mb-5 transition-colors duration-300">
+      <h3 class="text-base font-semibold text-text-primary dark:text-dark-text-primary mb-2">Zainteresowania</h3>
+      <p class="text-sm text-text-muted dark:text-dark-text-muted mb-4">Wybierz tematy, które Cię interesują — pomogą nam dopasować treści.</p>
+
+      <div class="flex flex-wrap gap-2">
+        <button
+          *ngFor="let interest of interestOptions"
+          (click)="toggleInterest(interest)"
+          class="px-4 py-2 text-sm font-medium rounded-full border transition-all duration-200"
+          [ngClass]="{
+            'bg-primary text-white border-primary': hasInterest(interest),
+            'bg-white dark:bg-dark-input text-text-secondary dark:text-dark-text-secondary border-border dark:border-dark-border hover:border-primary/30': !hasInterest(interest)
+          }"
+        >
+          {{ interest }}
+        </button>
+      </div>
+    </div>
+
+    <!-- Wygląd -->
+    <div class="bg-white dark:bg-dark-card rounded-2xl border border-border dark:border-dark-border p-6 mb-5 transition-colors duration-300">
+      <h3 class="text-base font-semibold text-text-primary dark:text-dark-text-primary mb-4">Wygląd</h3>
+
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm font-medium text-text-primary dark:text-dark-text-primary">Tryb ciemny</p>
+          <p class="text-xs text-text-muted dark:text-dark-text-muted mt-0.5">Zmień wygląd aplikacji na ciemny motyw</p>
+        </div>
+        <button
+          (click)="theme.toggle()"
+          class="relative w-12 h-7 rounded-full transition-colors duration-300"
+          [ngClass]="{
+            'bg-primary': theme.darkMode(),
+            'bg-border': !theme.darkMode()
+          }"
+        >
+          <span
+            class="absolute top-0.5 w-6 h-6 bg-white rounded-full shadow transition-transform duration-300 flex items-center justify-center text-xs"
+            [ngClass]="{
+              'translate-x-5': theme.darkMode(),
+              'translate-x-0.5': !theme.darkMode()
+            }"
+          >
+            {{ theme.darkMode() ? '🌙' : '☀️' }}
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Przycisk zapisz -->
+    <div class="flex items-center gap-4">
+      <button
+        (click)="save()"
+        class="px-8 py-3 bg-primary hover:bg-primary-dark text-white font-semibold text-sm rounded-full transition-all duration-200 shadow-md hover:shadow-lg"
+      >
+        Zapisz zmiany
+      </button>
+
+      <span
+        *ngIf="saved"
+        class="text-sm text-green font-medium flex items-center gap-1.5"
+      >
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+        </svg>
+        Zapisano!
+      </span>
+    </div>
+
+  </main>
+
+</div>

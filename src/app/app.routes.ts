@@ -17,6 +17,11 @@ export const routes: Routes = [
       import('./pages/dashboard/dashboard.component').then((m) => m.DashboardComponent),
   },
   {
+    path: 'profile',
+    loadComponent: () =>
+      import('./pages/profile/profile.component').then((m) => m.ProfileComponent),
+  },
+  {
     path: 'playbook/:id',
     loadComponent: () =>
       import('./pages/playbook-detail/playbook-detail.component').then(
