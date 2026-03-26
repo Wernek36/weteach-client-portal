@@ -1,46 +1,46 @@
-<div class="min-h-screen bg-[#F8F9FD]">
+<div class="min-h-screen bg-bg-subtle">
 
   <!-- Topbar -->
-  <header class="bg-white border-b border-[#E5E7EB] px-6 py-4">
+  <header class="bg-white border-b border-border px-6 py-4">
     <div class="max-w-4xl mx-auto flex items-center gap-4">
       <button
         routerLink="/dashboard"
-        class="w-9 h-9 rounded-xl border border-[#E5E7EB] flex items-center justify-center text-[#4B5563] hover:border-[#6C3CE0] hover:text-[#6C3CE0] transition"
+        class="w-9 h-9 rounded-xl border border-border flex items-center justify-center text-text-secondary hover:border-primary hover:text-primary transition"
       >
         ←
       </button>
       <div class="flex items-center gap-2">
-        <div class="w-8 h-8 bg-[#6C3CE0] rounded-xl flex items-center justify-center">
+        <div class="w-8 h-8 bg-primary rounded-xl flex items-center justify-center">
           <span class="text-white font-bold">W</span>
         </div>
-        <span class="text-lg font-bold text-[#1E2235]">WeTeach</span>
+        <span class="text-lg font-bold text-text-primary">WeTeach</span>
       </div>
     </div>
   </header>
 
   <!-- Hero Playbooka -->
-  <div class="bg-[#1A1A2E] text-white px-6 py-12">
+  <div class="bg-bg-dark text-white px-6 py-12">
     <div class="max-w-4xl mx-auto">
       <span class="inline-flex items-center gap-1.5 bg-white/10 text-xs font-medium px-3 py-1.5 rounded-full mb-4">
         🎯 Sprzedaż
       </span>
       <h1 class="text-3xl font-bold mb-3">Playbook Sprzedaży B2B</h1>
-      <p class="text-[#A0A3B1] text-base max-w-xl leading-relaxed">
+      <p class="text-text-muted text-base max-w-xl leading-relaxed">
         Strategie, skrypty i techniki zamykania sprzedaży w środowisku B2B. Praktyczne narzędzia gotowe do wdrożenia.
       </p>
 
       <!-- Progres -->
       <div class="mt-8 flex items-center gap-4">
         <div class="flex-1 max-w-xs">
-          <div class="flex justify-between text-xs text-[#A0A3B1] mb-1.5">
+          <div class="flex justify-between text-xs text-text-muted mb-1.5">
             <span>Postęp kursu</span>
             <span class="text-white font-medium">65%</span>
           </div>
           <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
-            <div class="h-full w-[65%] bg-[#6C3CE0] rounded-full"></div>
+            <div class="h-full w-[65%] bg-primary rounded-full"></div>
           </div>
         </div>
-        <span class="text-xs text-[#A0A3B1]">5 z 8 modułów</span>
+        <span class="text-xs text-text-muted">5 z 8 modułów</span>
       </div>
     </div>
   </div>
@@ -48,38 +48,38 @@
   <!-- Moduły -->
   <main class="max-w-4xl mx-auto px-6 py-10">
 
-    <h2 class="text-lg font-semibold text-[#1E2235] mb-5">Moduły</h2>
+    <h2 class="text-lg font-semibold text-text-primary mb-5">Moduły</h2>
 
     <div class="flex flex-col gap-3">
 
       <div
         *ngFor="let module of modules; let i = index"
-        class="bg-white rounded-2xl border border-[#E5E7EB] px-6 py-5 flex items-center gap-4 hover:border-[#6C3CE0]/30 hover:shadow-sm transition-all duration-200 cursor-pointer"
+        class="bg-white rounded-2xl border border-border px-6 py-5 flex items-center gap-4 hover:border-primary/30 hover:shadow-sm transition-all duration-200 cursor-pointer"
         [class.opacity-50]="module.locked"
       >
 
         <!-- Status ikona -->
-        <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+        <div class="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
              [ngClass]="{
-               'bg-[#22C55E]/10': module.status === 'done',
-               'bg-[#6C3CE0]/10': module.status === 'active',
-               'bg-[#E5E7EB]':    module.status === 'locked'
+               'bg-green/10': module.status === 'done',
+               'bg-primary/10': module.status === 'active',
+               'bg-border':    module.status === 'locked'
              }">
-          <span *ngIf="module.status === 'done'"  class="text-[#22C55E] text-lg">✓</span>
-          <span *ngIf="module.status === 'active'" class="text-[#6C3CE0] font-bold text-sm">{{ i + 1 }}</span>
-          <span *ngIf="module.status === 'locked'" class="text-[#9CA3AF] text-sm">🔒</span>
+          <span *ngIf="module.status === 'done'"  class="text-green text-lg">✓</span>
+          <span *ngIf="module.status === 'active'" class="text-primary font-bold text-sm">{{ i + 1 }}</span>
+          <span *ngIf="module.status === 'locked'" class="text-text-muted text-sm">🔒</span>
         </div>
 
         <!-- Treść -->
         <div class="flex-1">
           <div class="flex items-center gap-2">
-            <h3 class="text-sm font-semibold text-[#1E2235]">{{ module.title }}</h3>
+            <h3 class="text-sm font-semibold text-text-primary">{{ module.title }}</h3>
             <span *ngIf="module.status === 'active'"
-                  class="text-[10px] font-medium bg-[#6C3CE0]/10 text-[#6C3CE0] px-2 py-0.5 rounded-full">
+                  class="text-[10px] font-medium bg-primary/10 text-primary px-2 py-0.5 rounded-full">
               W trakcie
             </span>
           </div>
-          <p class="text-xs text-[#9CA3AF] mt-0.5">{{ module.duration }}</p>
+          <p class="text-xs text-text-muted mt-0.5">{{ module.duration }}</p>
         </div>
 
         <!-- Przycisk -->
@@ -87,8 +87,8 @@
           *ngIf="!module.locked"
           class="text-xs font-semibold px-4 py-2 rounded-full transition-all duration-200"
           [ngClass]="{
-            'bg-[#6C3CE0] text-white hover:bg-[#5B21B6]': module.status === 'active',
-            'text-[#6C3CE0] border border-[#6C3CE0] hover:bg-[#6C3CE0] hover:text-white': module.status === 'done'
+            'bg-primary text-white hover:bg-primary-dark': module.status === 'active',
+            'text-primary border border-primary hover:bg-primary hover:text-white': module.status === 'done'
           }"
         >
           {{ module.status === 'done' ? 'Powtórz' : 'Kontynuuj' }}

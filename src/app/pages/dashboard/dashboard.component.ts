@@ -26,7 +26,7 @@ export class DashboardComponent {
       description: 'Strategie, skrypty i techniki zamykania sprzedaży w środowisku B2B.',
       category: 'Sprzedaż',
       icon: '🎯',
-      iconBg: 'bg-[#6C3CE0]/10',
+      iconBg: 'bg-primary/10',
       progress: 65,
     },
     {
@@ -35,7 +35,7 @@ export class DashboardComponent {
       description: 'Jak wykorzystać narzędzia AI do tworzenia treści i kampanii.',
       category: 'Marketing',
       icon: '🤖',
-      iconBg: 'bg-[#22C55E]/10',
+      iconBg: 'bg-green/10',
       progress: 30,
     },
     {
@@ -44,7 +44,7 @@ export class DashboardComponent {
       description: 'Techniki negocjacyjne dla managerów i liderów sprzedaży.',
       category: 'Umiejętności',
       icon: '🤝',
-      iconBg: 'bg-[#F59E0B]/10',
+      iconBg: 'bg-warning/10',
       progress: 0,
     },
   ];
