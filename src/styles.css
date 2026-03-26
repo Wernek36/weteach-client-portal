@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ── WeTeach Design Tokens ─────────────────────────────────── */
+@theme {
+  --color-primary:        #6C3CE0;
+  --color-primary-light:  #8B5CF6;
+  --color-primary-dark:   #5B21B6;
+  --color-navy:           #1A1A2E;
+  --color-green:          #22C55E;
+
+  --color-text-primary:   #1E2235;
+  --color-text-secondary: #4B5563;
+  --color-text-muted:     #9CA3AF;
+  --color-text-inverted:  #FFFFFF;
+
+  --color-bg-subtle:      #F8F9FD;
+  --color-bg-dark:        #1A1A2E;
+  --color-border:         #E5E7EB;
+
+  --color-success:        #22C55E;
+  --color-error:          #EF4444;
+  --color-warning:        #F59E0B;
+
+  --font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #1E2235;
+  background-color: #F8F9FD;
+}
