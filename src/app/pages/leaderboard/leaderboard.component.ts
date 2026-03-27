@@ -12,6 +12,15 @@ interface RankedUser {
   isCurrentUser: boolean;
 }
 
+interface PlaybookRanking {
+  id: string;
+  title: string;
+  icon: string;
+  role: string;
+  totalModules: number;
+  users: RankedUser[];
+}
+
 interface PlaybookProgress {
   id: string;
   title: string;
@@ -39,20 +48,51 @@ interface OutdatedModule {
   templateUrl: './leaderboard.component.html',
 })
 export class LeaderboardComponent {
-  readonly currentUserRank = 8;
+  // Current user role from profile — "developer"
+  readonly currentUserRole = 'developer';
 
-  readonly leaderboard: RankedUser[] = [
-    { rank: 1,  nickname: 'mwojcik',       avatar: 'MW', progress: 100, completedModules: 16, totalModules: 16, isCurrentUser: false },
-    { rank: 2,  nickname: 'anowak_dev',    avatar: 'AN', progress: 94,  completedModules: 15, totalModules: 16, isCurrentUser: false },
-    { rank: 3,  nickname: 'kasia.zielona', avatar: 'KZ', progress: 88,  completedModules: 14, totalModules: 16, isCurrentUser: false },
-    { rank: 4,  nickname: 'tomek_pm',      avatar: 'TK', progress: 81,  completedModules: 13, totalModules: 16, isCurrentUser: false },
-    { rank: 5,  nickname: 'dev_ola',       avatar: 'OW', progress: 75,  completedModules: 12, totalModules: 16, isCurrentUser: false },
-    { rank: 6,  nickname: 'piotr.code',    avatar: 'PB', progress: 69,  completedModules: 11, totalModules: 16, isCurrentUser: false },
-    { rank: 7,  nickname: 'magda_ai',      avatar: 'MK', progress: 63,  completedModules: 10, totalModules: 16, isCurrentUser: false },
-    { rank: 8,  nickname: 'jkowalski',     avatar: 'JK', progress: 44,  completedModules: 7,  totalModules: 16, isCurrentUser: true },
-    { rank: 9,  nickname: 'bartek.ml',     avatar: 'BN', progress: 38,  completedModules: 6,  totalModules: 16, isCurrentUser: false },
-    { rank: 10, nickname: 'ewa_product',   avatar: 'ES', progress: 38,  completedModules: 6,  totalModules: 16, isCurrentUser: false },
+  readonly rankings: PlaybookRanking[] = [
+    {
+      id: '1',
+      title: 'AI Playbook dla Developera',
+      icon: '💻',
+      role: 'Developer',
+      totalModules: 8,
+      users: [
+        { rank: 1,  nickname: 'mwojcik',       avatar: 'MW', progress: 100, completedModules: 8, totalModules: 8, isCurrentUser: false },
+        { rank: 2,  nickname: 'anowak_dev',    avatar: 'AN', progress: 88,  completedModules: 7, totalModules: 8, isCurrentUser: false },
+        { rank: 3,  nickname: 'kasia.zielona', avatar: 'KZ', progress: 75,  completedModules: 6, totalModules: 8, isCurrentUser: false },
+        { rank: 4,  nickname: 'dev_ola',       avatar: 'OW', progress: 75,  completedModules: 6, totalModules: 8, isCurrentUser: false },
+        { rank: 5,  nickname: 'piotr.code',    avatar: 'PB', progress: 63,  completedModules: 5, totalModules: 8, isCurrentUser: false },
+        { rank: 6,  nickname: 'jkowalski',     avatar: 'JK', progress: 63,  completedModules: 5, totalModules: 8, isCurrentUser: true },
+        { rank: 7,  nickname: 'bartek.ml',     avatar: 'BN', progress: 50,  completedModules: 4, totalModules: 8, isCurrentUser: false },
+        { rank: 8,  nickname: 'marcin.dev',    avatar: 'MD', progress: 38,  completedModules: 3, totalModules: 8, isCurrentUser: false },
+        { rank: 9,  nickname: 'arek_fullstack', avatar: 'AR', progress: 25, completedModules: 2, totalModules: 8, isCurrentUser: false },
+        { rank: 10, nickname: 'kamil_ops',     avatar: 'KO', progress: 13,  completedModules: 1, totalModules: 8, isCurrentUser: false },
+      ],
+    },
+    {
+      id: '2',
+      title: 'AI Playbook dla Product Managera',
+      icon: '🎯',
+      role: 'Product Manager',
+      totalModules: 8,
+      users: [
+        { rank: 1,  nickname: 'tomek_pm',      avatar: 'TK', progress: 88,  completedModules: 7, totalModules: 8, isCurrentUser: false },
+        { rank: 2,  nickname: 'magda_ai',      avatar: 'MK', progress: 75,  completedModules: 6, totalModules: 8, isCurrentUser: false },
+        { rank: 3,  nickname: 'ewa_product',   avatar: 'ES', progress: 63,  completedModules: 5, totalModules: 8, isCurrentUser: false },
+        { rank: 4,  nickname: 'natalia.pm',    avatar: 'NL', progress: 50,  completedModules: 4, totalModules: 8, isCurrentUser: false },
+        { rank: 5,  nickname: 'asia_ux',       avatar: 'AJ', progress: 38,  completedModules: 3, totalModules: 8, isCurrentUser: false },
+        { rank: 6,  nickname: 'jkowalski',     avatar: 'JK', progress: 25,  completedModules: 2, totalModules: 8, isCurrentUser: true },
+        { rank: 7,  nickname: 'gosia.data',    avatar: 'GD', progress: 25,  completedModules: 2, totalModules: 8, isCurrentUser: false },
+        { rank: 8,  nickname: 'zuzia_ml',      avatar: 'ZW', progress: 13,  completedModules: 1, totalModules: 8, isCurrentUser: false },
+        { rank: 9,  nickname: 'robert.js',     avatar: 'RJ', progress: 13,  completedModules: 1, totalModules: 8, isCurrentUser: false },
+        { rank: 10, nickname: 'marta_new',     avatar: 'MN', progress: 0,   completedModules: 0, totalModules: 8, isCurrentUser: false },
+      ],
+    },
   ];
+
+  activeTab: string = '1';
 
   readonly myPlaybooks: PlaybookProgress[] = [
     {
@@ -60,7 +100,7 @@ export class LeaderboardComponent {
       title: 'AI Playbook dla Developera',
       icon: '💻',
       role: 'Developer',
-      progress: 65,
+      progress: 63,
       completedModules: 5,
       totalModules: 8,
       route: '/playbook/1',
@@ -112,10 +152,22 @@ export class LeaderboardComponent {
     },
   ];
 
+  get activeRanking(): PlaybookRanking {
+    return this.rankings.find((r) => r.id === this.activeTab) ?? this.rankings[0];
+  }
+
+  get currentUserInActiveRanking(): RankedUser | undefined {
+    return this.activeRanking.users.find((u) => u.isCurrentUser);
+  }
+
   get overallProgress(): number {
     const total = this.myPlaybooks.reduce((sum, p) => sum + p.totalModules, 0);
     const completed = this.myPlaybooks.reduce((sum, p) => sum + p.completedModules, 0);
     return total > 0 ? Math.round((completed / total) * 100) : 0;
+  }
+
+  setActiveTab(id: string): void {
+    this.activeTab = id;
   }
 
   getRankBadge(rank: number): string {
