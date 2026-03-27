@@ -12,6 +12,8 @@ interface Playbook {
   iconBg: string;
   progress: number;
   savedHours: number;
+  avgRating: number;
+  ratingsCount: number;
 }
 
 @Component({
@@ -34,6 +36,8 @@ export class DashboardComponent {
       iconBg: 'bg-primary/10',
       progress: 65,
       savedHours: 6,
+      avgRating: 4.6,
+      ratingsCount: 128,
     },
     {
       id: 2,
@@ -45,6 +49,8 @@ export class DashboardComponent {
       iconBg: 'bg-green/10',
       progress: 30,
       savedHours: 3,
+      avgRating: 4.3,
+      ratingsCount: 84,
     },
   ];
 
