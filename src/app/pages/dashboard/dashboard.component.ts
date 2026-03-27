@@ -11,6 +11,7 @@ interface Playbook {
   icon: string;
   iconBg: string;
   progress: number;
+  savedHours: number;
 }
 
 @Component({
@@ -32,6 +33,7 @@ export class DashboardComponent {
       icon: '💻',
       iconBg: 'bg-primary/10',
       progress: 65,
+      savedHours: 6,
     },
     {
       id: 2,
@@ -42,6 +44,19 @@ export class DashboardComponent {
       icon: '🎯',
       iconBg: 'bg-green/10',
       progress: 30,
+      savedHours: 3,
     },
   ];
+
+  get totalSavedHoursWeekly(): number {
+    return this.playbooks.reduce((sum, p) => sum + p.savedHours, 0);
+  }
+
+  get totalSavedHoursMonthly(): number {
+    return this.totalSavedHoursWeekly * 4;
+  }
+
+  get totalSavedHoursYearly(): number {
+    return this.totalSavedHoursWeekly * 48;
+  }
 }

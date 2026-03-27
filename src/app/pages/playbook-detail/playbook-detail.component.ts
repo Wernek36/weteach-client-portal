@@ -1,5 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { RouterModule, ActivatedRoute } from '@angular/router';
 import { ThemeService } from '../../shared/services/theme.service';
 
@@ -19,6 +20,8 @@ interface PlaybookData {
   progress: number;
   completedCount: number;
   modules: Module[];
+  userRating: number;
+  savedHours: number;
 }
 
 const PLAYBOOKS: Record<string, PlaybookData> = {
@@ -30,6 +33,8 @@ const PLAYBOOKS: Record<string, PlaybookData> = {
     icon: '💻',
     progress: 65,
     completedCount: 5,
+    userRating: 4,
+    savedHours: 6,
     modules: [
       { title: 'Prompt engineering w praktyce — pisanie skutecznych promptów', slug: 'prompt-engineering',   duration: '20 min', status: 'done', locked: false },
       { title: 'Integracja API OpenAI / Anthropic w aplikacji webowej',       slug: 'api-integration',      duration: '35 min', status: 'done', locked: false },
@@ -49,6 +54,8 @@ const PLAYBOOKS: Record<string, PlaybookData> = {
     icon: '🎯',
     progress: 30,
     completedCount: 2,
+    userRating: 3,
+    savedHours: 3,
     modules: [
       { title: 'Definiowanie wizji produktu z uwzględnieniem AI',             slug: 'product-vision',       duration: '20 min', status: 'done', locked: false },
       { title: 'Walidacja hipotez z użyciem AI prototypów',                   slug: 'hypothesis-validation', duration: '25 min', status: 'done', locked: false },
@@ -65,7 +72,7 @@ const PLAYBOOKS: Record<string, PlaybookData> = {
 @Component({
   selector: 'app-playbook-detail',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './playbook-detail.component.html',
 })
 export class PlaybookDetailComponent implements OnInit {
@@ -75,9 +82,34 @@ export class PlaybookDetailComponent implements OnInit {
 
   constructor(private readonly route: ActivatedRoute) {}
 
+  hoverRating = 0;
+  ratingSaved = false;
+  hoursSaved = false;
+
+  readonly stars = [1, 2, 3, 4, 5];
+
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id') ?? '1';
     this.playbookId = id;
     this.playbook = PLAYBOOKS[id] ?? PLAYBOOKS['1'];
+  }
+
+  setRating(value: number): void {
+    this.playbook = { ...this.playbook, userRating: value };
+    this.ratingSaved = true;
+    setTimeout(() => (this.ratingSaved = false), 2000);
+  }
+
+  setHoverRating(value: number): void {
+    this.hoverRating = value;
+  }
+
+  saveSavedHours(): void {
+    this.hoursSaved = true;
+    setTimeout(() => (this.hoursSaved = false), 2000);
+  }
+
+  getDisplayRating(): number {
+    return this.hoverRating || this.playbook.userRating;
   }
 }
