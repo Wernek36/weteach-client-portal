@@ -30,6 +30,7 @@ interface PlaybookProgress {
   completedModules: number;
   totalModules: number;
   route: string;
+  savedHours: number;
 }
 
 interface OutdatedModule {
@@ -104,6 +105,7 @@ export class LeaderboardComponent {
       completedModules: 5,
       totalModules: 8,
       route: '/playbook/1',
+      savedHours: 6,
     },
     {
       id: '2',
@@ -114,6 +116,7 @@ export class LeaderboardComponent {
       completedModules: 2,
       totalModules: 8,
       route: '/playbook/2',
+      savedHours: 3,
     },
   ];
 
@@ -158,6 +161,18 @@ export class LeaderboardComponent {
 
   get currentUserInActiveRanking(): RankedUser | undefined {
     return this.activeRanking.users.find((u) => u.isCurrentUser);
+  }
+
+  get totalSavedHoursWeekly(): number {
+    return this.myPlaybooks.reduce((sum, p) => sum + p.savedHours, 0);
+  }
+
+  get totalSavedHoursMonthly(): number {
+    return this.totalSavedHoursWeekly * 4;
+  }
+
+  get totalSavedHoursYearly(): number {
+    return this.totalSavedHoursWeekly * 48;
   }
 
   get overallProgress(): number {
